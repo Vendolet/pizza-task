@@ -1,18 +1,10 @@
 .header{
-    background-color: $color-dark-white;
-    padding-bottom: 40px;
-}
-
-.header__wrapper{
-    flex-direction: column;
-}
-
-.nav-user{
     background-color: $color-dark-blue;
+    padding-bottom: 40px;
     color: $color-white;
 }
 
-.nav-user__wrapper{
+.header__wrapper{
     height: 40px;
     justify-content: space-between;
 }
@@ -30,12 +22,11 @@
     }
 }
 
-.nav-user__button-block{
+.header__button-block{
     display: flex;
-    
 }
 
-.nav-user__button{
+.header__button{
     color: $color-white;
     font-size: 1.5rem;
     padding: 0 20px;
@@ -44,76 +35,16 @@
     display: flex;
     align-items: center;
 
+    &:hover{
+        background-color: darken($color-green, $amount: 20%);
+    }
 }
 
 .basket{
     background-color: $color-red;
-}
-
-.header-info{
-    display: flex;
-    height: 80px;
-    justify-content: space-between;
-    margin: 40px 0;
-}
-
-.header-info__about{
-    width: 240px;
-    padding-left: 50px;
-    align-self: center;
-
-    color: $color-red;
-    font-style: italic;
-    font-size: 1.5rem;
-    font-weight: 550;
-}
-
-.header-info__contacts{
-    display: flex;
-    flex-direction: column;
-
-    gap: 7px;
-}
-
-.header-info__phone{
-    color: $color-red;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: bold;
-    border: 5px solid $color-white;
-    text-align: center;
-    padding: 6px 0; 
-}
-
-.header-info__address{
-    color: $color-dark-blue;
-    font-size: 1.5rem;
-}
-
-.header-info__login{
-    display: flex;
-    width: 300px;
-    flex-direction: column;
-}
-
-.header-info__user{
-    background-color: $color-white;
-    font-size: 2rem;
-    font-weight: 550;
-    padding: 11px;
-    text-align: center;
-}
-
-.header-info__nav{
-    display: flex;
-    justify-content: space-around;
-}
-
-.header-info__link{
-    border-bottom: 1px solid $color-dark-blue;
-    font-size: 1.5rem;
-    color: $color-dark-blue;
-    margin-top: 6px;
+    &:hover{
+        background-color: darken($color-red, $amount: 20%);
+    }
 }
 
 .nav-pages{
