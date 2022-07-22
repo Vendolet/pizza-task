@@ -48,7 +48,6 @@
     &:hover{
         border: 3px solid $color-red;
         background-color: $color-red;
-
     }
 }
 
@@ -58,4 +57,12 @@
 
 .button_big{
     padding: 0 20px;
+}
+
+.button_submit{
+    background-color: $color-green;
+    &:hover{
+        border: 3px solid darken($color-green, $amount: 10%);
+        background-color: darken($color-green, $amount: 10%);
+    }
 }
