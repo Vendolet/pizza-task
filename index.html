@@ -26,7 +26,7 @@
         <div class="wrapper main__wrapper"  >
             <h2 class="h2">Наши предложения</h2>
 
-            <ul id="main"  class="cards-field">
+            <ul id="main" class="cards-field">
 
                 <li class="card" v-for="pizz of allPizz">
                     <div class="wrapper-card-img">
@@ -34,7 +34,9 @@
                     </div>
                     <p class="card__note">{{pizz.note}}</p>
                     <p class="card__price">{{pizz.price}} р</p>
-                    <button class="card__button">В корзину</button>
+                    <button v-on:click="addOrder(pizz.id)"
+                            class="card__button"
+                            v-bind:id="pizz.id">В корзину</button>
                 </li>
 
             </ul> 
@@ -43,7 +45,7 @@
                     <button v-on:click="prevPage" 
                             class="button button_big" 
                             v-bind:disabled="disablePrev">ПРЕДЫДУЩАЯ</button>
-                            
+
                     <button class="button button_active" 
                             v-bind:id="currentPage">{{ currentPage }}</button>
 

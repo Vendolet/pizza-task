@@ -6,7 +6,9 @@ const basket = Vue.createApp({
             }
     },
     methods: {
-
+        removeOrder(){
+            
+        }
     }
 }).mount('#basket');
 
@@ -68,8 +70,16 @@ const cards = Vue.createApp({
         }
     },
     methods: {
-        addOrder(){
+        addOrder(idOrder){
+            basket.countOrders += 1;
 
+            let PizzInBasket = this.allPizz.find( (pizz) => {
+                if (pizz.id === idOrder){
+                    return true;
+                }
+            })
+
+            basket.orders.push(PizzInBasket);
         }
     }
 }).mount('#main');
@@ -101,10 +111,31 @@ const pagination = Vue.createApp({
                 if( this.currentPage === this.allPage ){
                     this.disableNext = true;
                 }
+
+                this.newPage(this.currentPage);
             }
         },
-        checkDisableNext(){
-            return this.allPage > this.currentPage;
+        newPage(numPage){
+            cards.allPizz = [
+                    {
+                        id: 6,
+                        note: 'Пицца МЯСНАЯ',
+                        price: 620,
+                        img: './access/img/meet.jpg'
+                    },
+                    {
+                        id: 7,
+                        note: 'Пицца ПАПРИКА',
+                        price: 650,
+                        img: './access/img/paprika.jpg'
+                    },
+                    {
+                        id: 8,
+                        note: 'Пицца ПЕППЕРОНИ',
+                        price: 540,
+                        img: './access/img/pepperoni-lajt.jpg'
+                    }
+                ]
         }
     }
 }).mount('#pagination');
