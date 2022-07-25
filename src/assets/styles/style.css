@@ -1,0 +1,289 @@
+html {
+  font-size: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  min-width: 1115px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.header {
+  background-color: rgb(41, 52, 72);
+  padding-bottom: 40px;
+  color: rgb(255, 255, 255);
+}
+
+.header__wrapper {
+  height: 40px;
+  justify-content: space-between;
+}
+
+.logo {
+  background-color: rgb(238, 54, 66);
+  display: flex;
+  align-items: center;
+}
+.logo h1 {
+  margin: 0;
+  padding: 0 50px;
+  font-size: 3rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+.header__button-block {
+  display: flex;
+}
+
+.header__button {
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  padding: 0 20px;
+  background-color: rgb(99, 166, 61);
+  display: flex;
+  align-items: center;
+}
+.header__button:hover {
+  background-color: #375b22;
+}
+
+.basket {
+  background-color: rgb(238, 54, 66);
+}
+.basket:hover {
+  background-color: #af0f19;
+}
+
+.nav-pages {
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+}
+.nav-pages .nav-pages__link {
+  background-color: rgb(41, 52, 72);
+  height: 60px;
+  flex-grow: 1;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-pages .nav-pages__link:hover {
+  background-color: rgb(50, 66, 92);
+}
+
+.main {
+  background-color: rgb(255, 255, 255);
+  flex-grow: 1;
+}
+
+.main__wrapper {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.h2 {
+  font-size: 3rem;
+  color: rgb(50, 66, 92);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  background-color: rgb(242, 246, 249);
+  height: 90px;
+}
+
+.main__button-block {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.button {
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(242, 246, 249);
+  border-radius: 6px;
+  height: 50px;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.button:hover {
+  border: 3px solid rgb(238, 54, 66);
+  background-color: rgb(238, 54, 66);
+}
+
+.button_active {
+  background-color: rgb(238, 54, 66);
+}
+
+.button_big {
+  padding: 0 20px;
+}
+
+.button_submit {
+  color: rgb(255, 255, 255);
+  background-color: rgb(99, 166, 61);
+}
+.button_submit:hover {
+  border: 3px solid #4d812f;
+  background-color: #4d812f;
+}
+
+.cards-field {
+  margin: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.card {
+  width: 250px;
+  height: 380px;
+  border: 3px solid rgb(242, 246, 249);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.card:hover {
+  background-color: rgb(242, 246, 249);
+}
+.card:hover .card__button {
+  background-color: rgb(99, 166, 61);
+}
+
+.wrapper-card-img {
+  background-color: white;
+  width: 250px;
+  height: 250px;
+}
+
+.card__img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 250px;
+  height: 250px;
+}
+
+.card__note {
+  font-size: 1.5rem;
+  font-weight: 550;
+  color: black;
+  margin: 0px;
+}
+
+.card__price {
+  font-size: 1.5rem;
+  color: black;
+  margin: 0px;
+  font-weight: 550;
+}
+
+.card__button {
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: rgb(238, 54, 66);
+  width: 140px;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid rgb(242, 246, 249);
+  margin-bottom: 10px;
+}
+
+.order__img {
+  height: 40px;
+  width: 40px;
+}
+
+.order__note {
+  width: 60%;
+}
+
+.order__price {
+  width: 15%;
+}
+
+.form-order {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.label {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.input {
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+.address {
+  height: 100px;
+}
+
+.footer {
+  background-color: rgb(41, 52, 72);
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.footer .wrapper {
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__callback {
+  display: flex;
+  gap: 60px;
+}
+
+.important-text {
+  color: rgb(215, 186, 128);
+}/*# sourceMappingURL=style.css.map */

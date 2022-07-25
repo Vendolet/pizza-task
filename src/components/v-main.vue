@@ -1,21 +1,18 @@
 <template>
-    <VCatalogVue></VCatalogVue>
-    <vBasket></vBasket>
+    <vCatalogVue></vCatalogVue>
+    <vBasketVue></vBasketVue>
 </template>
 
 <script>
     import vCatalogVue from './v-catalog.vue'
     import vBasketVue from './v-basket.vue'
-import VCatalog from './v-catalog.vue'
 
     export default{
         name: 'vMainVue',
-        components: { VCatalog },
+        components: { vCatalogVue, vBasketVue },
         props: {},
         data() {
-            return{
-                title: ''
-            }
+            return{ }
         },
         computed: {},
         methods: {},
@@ -27,6 +24,6 @@ import VCatalog from './v-catalog.vue'
 
 </script>
 
-<style>
+<style lang="scsss">
 
 </style>

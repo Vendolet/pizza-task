@@ -70,5 +70,29 @@ export const db = [
         note: 'Пицца томатная',
         price: 480,
         img: './access/img/tomato.jpg'
+    },
+    {
+        "id": 9,
+        "note": "Пицца ПРОВАНС",
+        "price": 570,
+        "img": "./src/access/img/provance.jpg"
+    },
+    {
+        "id": 10,
+        "note": "Пицца с беконом",
+        "price": 540,
+        "img": "./src/access/img/pizza-bekon.jpg"
+    },
+    {
+        "id": 11,
+        "note": "Пицца СОЛЯМИ",
+        "price": 600,
+        "img": "./src/access/img/solyami.jpg"
+    },
+    {
+        "id": 12,
+        "note": "Пицца томатная",
+        "price": 480,
+        "img": "./src/access/img/tomato.jpg"
     }
 ];

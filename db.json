@@ -3,7 +3,61 @@
       { "id": 1, "title": "json-server", "author": "typicode" }
     ],
     "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
+      { "id": 1, "body": "some comment", "postid": 1 }
     ],
-    "profile": { "name": "typicode" }
-  }
+    "profile": { "name": "typicode" },
+
+    "pizzas": [
+      {
+        "id": 1,
+        "note": "Пицца АМЕРИКАНО",
+        "price": 500,
+        "img": "./src/access/img/americano.jpg"
+    },
+    {
+        "id": 2,
+        "note": "Пицца БРОККОЛИ",
+        "price": 520,
+        "img": "./src/access/img/broccole.jpg"
+    },
+    {
+        "id": 3,
+        "note": "Пицца с цыплёнком",
+        "price": 480,
+        "img": "./src/access/img/checkee.jpg"
+    },
+    {
+        "id": 4,
+        "note": "Пицца классическая",
+        "price": 450,
+        "img": "./src/access/img/classic.jpg"
+    },
+    {
+        "id": 5,
+        "note": "Пицца СЫР",
+        "price": 560,
+        "img": "./src/access/img/don-cheeze.jpeg"
+    },
+    {
+        "id": 6,
+        "note": "Пицца МЯСНАЯ",
+        "price": 620,
+        "img": "./src/access/img/meet.jpg"
+    },
+    {
+        "id": 7,
+        "note": "Пицца ПАПРИКА",
+        "price": 650,
+        "img": "./src/access/img/paprika.jpg"
+    },
+    {
+        "id": 8,
+        "note": "Пицца ПЕППЕРОНИ",
+        "price": 540,
+        "img": "./src/access/img/pepperoni-lajt.jpg"
+    }
+    ]
+}
+
+
+

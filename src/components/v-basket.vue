@@ -1,16 +1,14 @@
 <template>
-
+    <p></p>
 </template>
 
 <script>
     export default{
-        name: '',
+        name: 'vBasketVue',
         components: {},
         props: {},
         data() {
-            return{
-                title: ''
-            }
+            return{}
         },
         computed: {},
         methods: {},
@@ -22,6 +20,6 @@
 
 </script>
 
-<style>
+<style lang="scss">
 
 </style>
