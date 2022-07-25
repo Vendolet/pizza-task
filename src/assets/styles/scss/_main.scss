@@ -1,0 +1,65 @@
+.main{
+    background-color: $color-white;
+    flex-grow: 1;
+}
+
+.main__wrapper{
+    flex-direction: column;
+    justify-content: center;
+}
+
+.h2{
+    font-size: 3rem;
+    color: $color-blue;
+    font-weight: 400;
+
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    background-color: $color-dark-white;
+    height: 90px;
+}
+
+.main__button-block{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+}
+
+.button{
+    cursor: pointer;
+    background-color: $color-white;
+    border: 3px solid $color-dark-white;
+    border-radius: 6px;
+    height: 50px;
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5rem;
+
+    &:hover{
+        border: 3px solid $color-red;
+        background-color: $color-red;
+    }
+}
+
+.button_active{
+    background-color: $color-red;
+}
+
+.button_big{
+    padding: 0 20px;
+}
+
+.button_submit{
+    color: $color-white;
+    background-color: $color-green;
+    &:hover{
+        border: 3px solid darken($color-green, $amount: 10%);
+        background-color: darken($color-green, $amount: 10%);
+    }
+}

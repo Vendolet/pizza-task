@@ -1,8 +1,11 @@
 <template>
 <p>Hi</p>
+<vMainVue></vMainVue>
 </template>
 
 <script>
+
+import vMainVue from './components/v-main.vue';
 
 export default {
   name: 'App',
