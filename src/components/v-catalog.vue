@@ -3,7 +3,7 @@
         <h2 class="h2">Наши предложения</h2>
 
         <ul id="main" class="cards-field">
-            <vCardVue v-for="product in products" 
+            <vCardVue v-for="product in PRODUCTS" 
                       v-bind:key="product.id" 
                       v-bind:productData="product"
                       @addProduct="showDataToConsole"></vCardVue>
@@ -14,6 +14,7 @@
 
 <script>
     import vCardVue from './v-card.vue';
+    import { mapActions, mapGetters } from 'vuex';
     import vPaginationVue from './v-pagination.vue';
 
     export default{
@@ -24,68 +25,31 @@
             },
         props: {},
         data() {
-            return{
-                products: [
-                    {
-                        id: 1,
-                        note: "Пицца АМЕРИКАНО",
-                        price: 500,
-                        img: "americano.jpg"
-                    },
-                    {
-                        id: 2,
-                        note: "Пицца БРОККОЛИ",
-                        price: 520,
-                        img: "broccole.jpg"
-                    },
-                    {
-                        id: 3,
-                        note: "Пицца с цыплёнком",
-                        price: 480,
-                        img: "checkee.jpg"
-                    },
-                    {
-                        id: 4,
-                        note: "Пицца классическая",
-                        price: 450,
-                        img: "classic.jpg"
-                    },
-                    {
-                        id: 5,
-                        note: "Пицца СЫР",
-                        price: 560,
-                        img: "don-cheeze.jpeg"
-                    },
-                    {
-                        id: 6,
-                        note: "Пицца МЯСНАЯ",
-                        price: 620,
-                        img: "meet.jpg"
-                    },
-                    {
-                        id: 7,
-                        note: "Пицца ПАПРИКА",
-                        price: 650,
-                        img: "paprika.jpg"
-                    },
-                    {
-                        id: 8,
-                        note: "Пицца ПЕППЕРОНИ",
-                        price: 540,
-                        img: "pepperoni-lajt.jpg"
-                    }
-                ]
-            }
+            return{}
         },
-        computed: {},
+        computed: {
+            ...mapGetters([
+                'PRODUCTS'
+            ])
+        },
         methods: {
+            ...mapActions([
+                'GET_PRODUCTS'
+            ]),
+            
             showDataToConsole(data){
                 console.log(data);
             }
         },
         watch: {},
         mounted() {
-            console.log('download catalog')
+            this.GET_PRODUCTS()
+                .then((response) => {
+                    if(response.data){
+                        console.log("Data arrived!");
+                    }
+
+            })
         }
     }
 

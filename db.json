@@ -12,49 +12,49 @@
         "id": 1,
         "note": "Пицца АМЕРИКАНО",
         "price": 500,
-        "img": "./src/access/img/americano.jpg"
+        "img": "americano.jpg"
     },
     {
         "id": 2,
         "note": "Пицца БРОККОЛИ",
         "price": 520,
-        "img": "./src/access/img/broccole.jpg"
+        "img": "broccole.jpg"
     },
     {
         "id": 3,
         "note": "Пицца с цыплёнком",
         "price": 480,
-        "img": "./src/access/img/checkee.jpg"
+        "img": "checkee.jpg"
     },
     {
         "id": 4,
         "note": "Пицца классическая",
         "price": 450,
-        "img": "./src/access/img/classic.jpg"
+        "img": "classic.jpg"
     },
     {
         "id": 5,
         "note": "Пицца СЫР",
         "price": 560,
-        "img": "./src/access/img/don-cheeze.jpeg"
+        "img": "don-cheeze.jpeg"
     },
     {
         "id": 6,
         "note": "Пицца МЯСНАЯ",
         "price": 620,
-        "img": "./src/access/img/meet.jpg"
+        "img": "meet.jpg"
     },
     {
         "id": 7,
         "note": "Пицца ПАПРИКА",
         "price": 650,
-        "img": "./src/access/img/paprika.jpg"
+        "img": "paprika.jpg"
     },
     {
         "id": 8,
         "note": "Пицца ПЕППЕРОНИ",
         "price": 540,
-        "img": "./src/access/img/pepperoni-lajt.jpg"
+        "img": "pepperoni-lajt.jpg"
     }
     ]
 }
