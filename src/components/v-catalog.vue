@@ -4,9 +4,9 @@
 
         <ul id="main" class="cards-field">
             <vCardVue v-for="product in PRODUCTS" 
-                      v-bind:key="product.id" 
-                      v-bind:productData="product"
-                      @addProduct="showDataToConsole"></vCardVue>
+                      :key="product.id" 
+                      :productData="product"
+                      @addProductToBasket="addProductToBasket"></vCardVue>
         </ul>
         <vPaginationVue></vPaginationVue>
     </div>
@@ -34,11 +34,12 @@
         },
         methods: {
             ...mapActions([
-                'GET_PRODUCTS'
+                'GET_PRODUCTS',
+                'ADD_TO_BASKET'
             ]),
             
-            showDataToConsole(data){
-                console.log(data);
+            addProductToBasket(data){
+                this.ADD_TO_BASKET(data);
             }
         },
         watch: {},

@@ -1,20 +1,31 @@
 <template>
     <vCatalogVue></vCatalogVue>
-    <vBasketVue></vBasketVue>
+    <vBasketVue v-if="BASKET.length"
+                :basketData="BASKET"></vBasketVue>
 </template>
 
 <script>
-    import vCatalogVue from './v-catalog.vue'
-    import vBasketVue from './v-basket.vue'
+    import vCatalogVue from './v-catalog.vue';
+    import vBasketVue from './v-basket.vue';
+    import { mapGetters } from 'vuex';
 
     export default{
         name: 'vMainVue',
-        components: { vCatalogVue, vBasketVue },
-        props: {},
+        components: { 
+            vCatalogVue,
+            vBasketVue 
+        },
+        props: {
+
+        },
         data() {
             return{ }
         },
-        computed: {},
+        computed: {
+            ...mapGetters([
+                'BASKET'
+            ])
+        },
         methods: {},
         watch: {},
         mounted() {

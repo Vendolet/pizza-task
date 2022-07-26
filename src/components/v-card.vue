@@ -1,12 +1,14 @@
 <template>
     <li class="card">
         <div class="wrapper-card-img">
-            <img v-bind:src="require('../assets/img/' + productData.img)" class="card__img"  v-bind:alt="productData.note">
+            <img class="card__img" 
+                 :src="require('../assets/img/' + productData.img)" 
+                 :alt="productData.note">
         </div>
         <p class="card__note">{{productData.note}}</p>
         <p class="card__price">{{productData.price}} р</p>
-        <button v-on:click="addProduct(productData.id)"
-                class="card__button"
+        <button class="card__button"
+                v-on:click="addProductToBasket"
                 v-bind:id="productData.id">В корзину</button>
     </li>
 </template>
@@ -27,8 +29,8 @@
         },
         computed: {},
         methods: {
-            addProduct(){
-                return this.$emit('addProduct', this.productData.id);
+            addProductToBasket(){
+                this.$emit('addProductToBasket', this.productData)
             }
         },
     }
