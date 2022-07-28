@@ -1,16 +1,4 @@
 <template>
-  <header class="header">
-      <div class="wrapper header__wrapper">
-          <div class="logo">
-              <a><h1>ПИЦЦА-БЫСТРО</h1></a>
-          </div>
-
-          <div class="header__button-block" id="basket" >
-              <a class="header__button basket" href="basket.html">Корзина ({{ countOrders }})</a>
-              <a class="header__button" href="basket.html">Оформить заказ</a>
-          </div>
-      </div>
-  </header>
   <vMainVue></vMainVue>
 
   <footer class="footer">
@@ -31,16 +19,13 @@
 </template>
 
 <script>
-
     import vMainVue from './components/v-main.vue';
 
     export default {
         name: 'App',
         components: { vMainVue },
         data () {
-          return{
-            countOrders: 4
-          }
+          return{}
         }
     }
 </script>

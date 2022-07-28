@@ -1,15 +1,16 @@
 <template>
-    <div class="wrapper main__wrapper"  >
-        <h2 class="h2">Наши предложения</h2>
 
-        <ul id="main" class="cards-field">
-            <vCardVue v-for="product in PRODUCTS" 
-                      :key="product.id" 
-                      :productData="product"
-                      @addProductToBasket="addProductToBasket"></vCardVue>
-        </ul>
-        <vPaginationVue></vPaginationVue>
-    </div>
+    <h2 class="h2">Наши предложения</h2>
+
+    <ul id="main" class="cards-field">
+        <vCardVue v-for="product in PRODUCTS" 
+                    :key="product.id" 
+                    :productData="product"
+                    @addProductToBasket="addProductToBasket"></vCardVue>
+    </ul>
+    
+    <vPaginationVue></vPaginationVue>
+
 </template>
 
 <script>
