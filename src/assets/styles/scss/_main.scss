@@ -20,6 +20,17 @@
     height: 90px;
 }
 
+.total-price{
+    font-size: 2rem;
+    color: $color-blue;
+    font-weight: 400;
+
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    height: 50px;
+}
+
 .main__button-block{
     display: flex;
     justify-content: center;

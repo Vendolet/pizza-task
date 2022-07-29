@@ -6,8 +6,8 @@
           </div>
 
           <div class="header__button-block" id="basket" >
-              <div class="header__button basket">Корзина ({{ BASKET.length }})</div>
-              <router-link class="header__button" 
+              <div class="header__button">Корзина ({{ BASKET.length }})</div>
+              <router-link class="header__button order_btn" 
                            :to="{name: 'basket'}">Оформить заказ</router-link>
           </div>
       </div>
@@ -16,8 +16,6 @@
     <main class="main">
         <div class="wrapper main__wrapper">
             <router-view></router-view>
-            <!-- <vCatalogVue></vCatalogVue>
-            <vBasketVue :basketData="BASKET"></vBasketVue> -->
         </div>
     </main>
 
@@ -26,12 +24,9 @@
 <script>
 
     import { mapGetters } from 'vuex';
-    // import vCatalogVue from './v-catalog.vue';
-    // import vBasketVue from './v-basket.vue';
 
     export default{
         name: 'vMainVue',
-        // components: { vCatalogVue, vBasketVue },
         props: {},
         data() {
             return{ }

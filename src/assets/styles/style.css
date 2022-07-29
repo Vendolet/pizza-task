@@ -63,19 +63,17 @@ li {
   color: rgb(255, 255, 255);
   font-size: 1.5rem;
   padding: 0 20px;
-  background-color: rgb(99, 166, 61);
+  background-color: rgb(238, 54, 66);
   display: flex;
   align-items: center;
 }
-.header__button:hover {
-  background-color: #375b22;
-}
 
-.basket {
-  background-color: rgb(238, 54, 66);
+.order_btn {
+  background-color: rgb(99, 166, 61);
+  margin-bottom: 0;
 }
-.basket:hover {
-  background-color: #af0f19;
+.order_btn:hover {
+  background-color: #375b22;
 }
 
 .nav-pages {
@@ -116,6 +114,16 @@ li {
   padding-left: 30px;
   background-color: rgb(242, 246, 249);
   height: 90px;
+}
+
+.total-price {
+  font-size: 2rem;
+  color: rgb(50, 66, 92);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  height: 50px;
 }
 
 .main__button-block {

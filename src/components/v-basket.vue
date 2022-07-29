@@ -11,6 +11,8 @@
         </vBasketItemVue>
     </ul>
 
+    <p class="total-price"> Добавлено товаров на сумму: {{calcTotalPriceOrders}} р</p>
+
     <div v-if="BASKET.length" class="main__button-block">
         <a href="order.html" class="button button_big button_submit">Оформить заказ</a>
     </div>
@@ -23,24 +25,24 @@
 
     export default{
         name: 'vBasketVue',
-        components: {
-            vBasketItemVue
-        },
-        props: {
-            // basketData: {
-            //     type: Array,
-            //     default() {
-            //         return [];
-            //     }
-            // }
-        },
         data() {
             return{}
+        },
+        components: {
+            vBasketItemVue
         },
         computed: {
             ...mapGetters([
                 "BASKET"
-            ])
+            ]),
+            calcTotalPriceOrders () {
+                let result = 0;
+                for (let item of this.BASKET){
+                    result += item.price;
+                }
+
+                return result;
+            }
         },
         methods: {
             ...mapActions([
@@ -50,7 +52,6 @@
                 this.DELETE_FROM_BASKET(index);
             }
         },
-        watch: {},
         mounted() {
             console.log('download basket')
         }
