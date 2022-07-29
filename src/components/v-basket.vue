@@ -14,7 +14,7 @@
     <p class="total-price"> Добавлено товаров на сумму: {{calcTotalPriceOrders}} р</p>
 
     <div v-if="BASKET.length" class="main__button-block">
-        <a href="order.html" class="button button_big button_submit">Оформить заказ</a>
+        <router-link :to="{name: 'formOrder'}" class="button button_big button_submit">Оформить заказ</router-link>
     </div>
     
 </template>
