@@ -1,0 +1,36 @@
+.form-order{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    
+    margin: auto;
+}
+
+.label{
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.input{
+    height: 20px;
+    margin-top: 5px;
+}
+
+.input_invalid{
+    padding: 4px;
+    border: 1px solid rgb(212, 51, 51);
+    border-radius: 5px;
+}
+
+.input-invalid_text{
+    color: rgb(212, 51, 51);
+}
+
+.prefix-tel{
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+.address{
+    height: 100px;
+}

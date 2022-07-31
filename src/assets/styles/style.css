@@ -63,19 +63,17 @@ li {
   color: rgb(255, 255, 255);
   font-size: 1.5rem;
   padding: 0 20px;
-  background-color: rgb(99, 166, 61);
+  background-color: rgb(238, 54, 66);
   display: flex;
   align-items: center;
 }
-.header__button:hover {
-  background-color: #375b22;
-}
 
-.basket {
-  background-color: rgb(238, 54, 66);
+.order_btn {
+  background-color: rgb(99, 166, 61);
+  margin-bottom: 0;
 }
-.basket:hover {
-  background-color: #af0f19;
+.order_btn:hover {
+  background-color: #375b22;
 }
 
 .nav-pages {
@@ -118,11 +116,22 @@ li {
   height: 90px;
 }
 
+.total-price {
+  font-size: 2rem;
+  color: rgb(50, 66, 92);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  height: 50px;
+}
+
 .main__button-block {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .button {
@@ -255,12 +264,27 @@ li {
 
 .label {
   font-size: 1.5rem;
-  margin-bottom: 5px;
+  margin-top: 20px;
 }
 
 .input {
   height: 20px;
-  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.input_invalid {
+  padding: 4px;
+  border: 1px solid rgb(212, 51, 51);
+  border-radius: 5px;
+}
+
+.input-invalid_text {
+  color: rgb(212, 51, 51);
+}
+
+.prefix-tel {
+  font-size: 1.5rem;
+  margin-right: 5px;
 }
 
 .address {
