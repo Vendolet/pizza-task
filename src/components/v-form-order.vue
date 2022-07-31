@@ -62,7 +62,8 @@
                     name: '',
                     phone: '',
                     address: ''
-                }
+                },
+                // BASKET: {}
             }
         },
         validations () {
@@ -96,7 +97,7 @@
             },
             async sendOrder() {
                 return axios.post('http://localhost:3000/addOrder', {
-                    basket: BASKET,
+                    basket: this.BASKET,
                     dataCustomer: this.dataCustomer
                 }).then((response) => {
                     console.log(response);
