@@ -28,7 +28,6 @@
            v-if="v$.dataCustomer.phone.$error">Введите корректный ваш номер телефона</p>
         </div>
 
-               
         <label class="label"
                for="address">Ваш адрес:</label>
         <textarea class="input address"
@@ -48,6 +47,8 @@
 
 <script>
     import useVuelidate from '@vuelidate/core';
+    import { mapGetters } from 'vuex';
+    import axios from 'axios';
     import { required, numeric, minLength, maxLength } from '@vuelidate/validators';
 
     export default{
@@ -87,13 +88,27 @@
             validateForm() {
                 this.v$.dataCustomer.$touch();
                 if(!this.v$.dataCustomer.$error){
-                    console.log('Всё хорошо');
-                    console.log(this.v$.dataCustomer.$error);
+                    console.log('Валидация прошла успешно.');  
+                    this.sendOrder();
                 }else{
-                    console.log('Всё плохо');
-                    console.log(this.v$.dataCustomer.$error);
+                    console.log('Ошибка в форме');
                 }
+            },
+            async sendOrder() {
+                return axios.post('http://localhost:3000/addOrder', {
+                    basket: BASKET,
+                    dataCustomer: this.dataCustomer
+                }).then((response) => {
+                    console.log(response);
+                }).catch((error) => {
+                    console.log(error);
+                })
             }
+        },
+        computed: {
+            ...mapGetters([
+                'BASKET'
+            ])
         },
         mounted() {
             console.log('download form')
