@@ -96,7 +96,8 @@
                 }
             },
             async sendOrder() {
-                return axios.post('http://localhost:3000/addOrder', {
+                // return
+                axios.post('http://pizza-market:81/api/basket', {
                     basket: this.BASKET,
                     dataCustomer: this.dataCustomer
                 }).then((response) => {
