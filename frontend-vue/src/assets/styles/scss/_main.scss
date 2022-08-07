@@ -59,8 +59,23 @@
     }
 }
 
+.button_disable{
+    cursor: default;
+    background-color: $color-white;
+    border: 3px solid $color-dark-white;
+    border-radius: 6px;
+    height: 50px;
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5rem;
+}
+
 .button_active{
     background-color: $color-red;
+    font-size: 2rem;
 }
 
 .button_big{

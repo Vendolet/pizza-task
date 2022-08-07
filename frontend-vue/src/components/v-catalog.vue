@@ -9,7 +9,10 @@
                     @addProductToBasket="addProductToBasket"></vCardVue>
     </ul>
     
-    <vPaginationVue></vPaginationVue>
+    <vPaginationVue :current_page="PAGINATION.current_page"
+                    :last_page="PAGINATION.last_page"
+                    :next_page_url="PAGINATION.next_page_url"
+                    :prev_page_url="PAGINATION.prev_page_url"></vPaginationVue>
 
 </template>
 
@@ -30,7 +33,8 @@
         },
         computed: {
             ...mapGetters([
-                'PRODUCTS'
+                'PRODUCTS',
+                'PAGINATION'
             ])
         },
         methods: {
@@ -42,19 +46,8 @@
             addProductToBasket(data){
                 this.ADD_TO_BASKET(data);
             }
-        },
-        watch: {},
-        mounted() {
-            this.GET_PRODUCTS()
-                .then((response) => {
-                    if(response.data){
-                        console.log("Data arrived!");
-                    }
-
-            })
         }
     }
-
 </script>
 
 <style lang="sass">

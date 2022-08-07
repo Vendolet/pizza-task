@@ -70,7 +70,6 @@
                 dataCustomer: {
                     name: { 
                         required, 
-                        minLength: minLength(2)
                     },
                     phone: { 
                         required, 
