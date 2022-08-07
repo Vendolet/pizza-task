@@ -1,2 +1,0 @@
-# pizza-task
-Test task
