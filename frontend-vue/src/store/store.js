@@ -12,7 +12,9 @@ let store = createStore({
             prev_page_url: null,
             last_page: null,
             current_page: null
-        }
+        },
+        startPage: 'http://pizza-market:81/api'
+        // startPage: 'http://localhost:3000/api'
     },
     mutations: {
         SET_PRODUCTS_TO_STATE: (state, response) => {
@@ -31,16 +33,15 @@ let store = createStore({
         },
         REMOVE_BASKET: (state, index) => {
             state.basket.splice(index, 1);
+        },
+        CLEAR_BASKET: (state) => {
+            state.basket = [];
         }
     },
     actions: {
         GET_PRODUCTS({commit}, link){
             return axios(link, {
                 method: "GET"
-                // http://pizza-market:81/api
-            // }).then((products) => {
-            //     commit('SET_PRODUCTS_TO_STATE', products.data);
-            //     return products;
                 }).then((response) => {
                     commit('SET_PRODUCTS_TO_STATE', response.data);
                     commit('SET_PAGINATION_TO_STATE', response.data);
@@ -55,6 +56,9 @@ let store = createStore({
         },
         DELETE_FROM_BASKET({commit}, index){
             commit('REMOVE_BASKET', index);
+        },
+        CLEAR_BASKET({commit}){
+            commit('CLEAR_BASKET');
         }
     },
     getters: {
@@ -66,6 +70,9 @@ let store = createStore({
         },
         PAGINATION(state){
             return state.pagination;
+        },
+        START_PAGE(state){
+            return state.startPage;
         }
     }
 });

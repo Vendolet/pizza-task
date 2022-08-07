@@ -2,7 +2,19 @@
 
     <h2 class="h2">Оформление заказа</h2>
 
-    <form class="form-order" @submit.prevent="validateForm">
+    <div v-if="isOrderToSend">
+        <p class="label">{{ messageAboutSend }}</p>
+        
+        <div class="main__button-block">
+                    <router-link class="button button_big button_submit"
+                       :to="{name: 'catalog'}">На главную</router-link>
+        </div>
+    </div>
+
+    <form class="form-order" 
+          @submit.prevent="validateForm"
+          v-else>
+
         <label class="label" for="name">Введите ваше имя:</label>
         <input class="input"
                :class="{ input_invalid: v$.dataCustomer.name.$error }"
@@ -47,7 +59,7 @@
 
 <script>
     import useVuelidate from '@vuelidate/core';
-    import { mapGetters } from 'vuex';
+    import { mapActions, mapGetters } from 'vuex';
     import axios from 'axios';
     import { required, numeric, minLength, maxLength } from '@vuelidate/validators';
 
@@ -62,7 +74,9 @@
                     name: '',
                     phone: '',
                     address: ''
-                }
+                },
+                isOrderToSend: false,
+                messageAboutSend: ''
             }
         },
         validations () {
@@ -87,26 +101,43 @@
             validateForm() {
                 this.v$.dataCustomer.$touch();
                 if(!this.v$.dataCustomer.$error){
-                    console.log('Валидация прошла успешно.');  
                     this.sendOrder();
-                }else{
-                    console.log('Ошибка в форме');
                 }
             },
             async sendOrder() {
-                axios.post('http://pizza-market:81/api/basket', {
+                axios.post(this.START_PAGE + '/basket', {
                     basket: this.BASKET,
                     dataCustomer: this.dataCustomer
                 }).then((response) => {
                     console.log(response);
+                    this.showFarewellPage(response.status);
+                    this.clearBasket();
                 }).catch((error) => {
                     console.log(error);
+                    this.showFarewellPage(error.code);
                 })
+            },
+            async showFarewellPage(status){
+                this.isOrderToSend = true;
+
+                if (status === 200){
+                    this.messageAboutSend = 'Мы приняли ваш заказ. В ближайшее время наш оператор свяжется с вами.'
+                }else{
+                    this.messageAboutSend = 'Извините, данный сервис временно не доступен. Вы также можете оформить заказ через телефон';
+                }
+            },
+            ...mapActions([
+                'DELETE_FROM_BASKET',
+                'CLEAR_BASKET'
+            ]),
+            clearBasket(){
+                this.CLEAR_BASKET();
             }
         },
         computed: {
             ...mapGetters([
-                'BASKET'
+                'BASKET',
+                'START_PAGE'
             ])
         }
     }

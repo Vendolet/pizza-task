@@ -29,7 +29,9 @@
             },
         props: {},
         data() {
-            return{}
+            return{
+                // linkStartPage: 'http://pizza-market:81/api'
+            }
         },
         computed: {
             ...mapGetters([

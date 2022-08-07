@@ -15,7 +15,7 @@
 
 <script>
 
-    import { mapActions } from 'vuex';
+    import { mapActions, mapGetters } from 'vuex';
 
     export default{
         name: 'vPaginationVue',
@@ -24,13 +24,18 @@
             last_page: Number,
             next_page_url: String,
             prev_page_url: String
+            // linkStartPageProps: String
         },
         data() {
             return{
-                linkStartPage: 'http://pizza-market:81/api'
+                linkStartPage: ''
+                // linkStartPage: 'http://localhost:3000/api'
             }
         },
         computed: {
+            ...mapGetters([
+                'START_PAGE'
+            ]),
             isPrevDisable(){
                 if(this.current_page < 2){
                     return 'button_disable'
@@ -57,9 +62,13 @@
             prevPage(){
                 this.linkStartPage = this.prev_page_url;
                 this.GET_PRODUCTS( this.linkStartPage );
+            },
+            updateData(){
+                this.linkStartPage = this.START_PAGE;
             }
         },
         mounted() {
+            this.updateData();
             console.log('download pagination');
             this.GET_PRODUCTS( this.linkStartPage );
         }
