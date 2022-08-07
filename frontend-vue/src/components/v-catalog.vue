@@ -13,7 +13,6 @@
                     :last_page="PAGINATION.last_page"
                     :next_page_url="PAGINATION.next_page_url"
                     :prev_page_url="PAGINATION.prev_page_url"></vPaginationVue>
-
 </template>
 
 <script>
@@ -29,9 +28,7 @@
             },
         props: {},
         data() {
-            return{
-                // linkStartPage: 'http://pizza-market:81/api'
-            }
+            return{}
         },
         computed: {
             ...mapGetters([
@@ -44,7 +41,6 @@
                 'GET_PRODUCTS',
                 'ADD_TO_BASKET'
             ]),
-            
             addProductToBasket(data){
                 this.ADD_TO_BASKET(data);
             }

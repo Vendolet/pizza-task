@@ -24,15 +24,11 @@
         data() {
             return{}
         },
-        computed: {},
         methods: {
             removeProductOfBasket(){
                 this.$emit('removeProductOfBasket');
             }
         },
-        mounted(){
-            // this.$set(this.productOfBasketData, 'numder', 1);
-        }
     }
 </script>
 

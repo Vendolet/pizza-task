@@ -24,12 +24,10 @@
             last_page: Number,
             next_page_url: String,
             prev_page_url: String
-            // linkStartPageProps: String
         },
         data() {
             return{
                 linkStartPage: ''
-                // linkStartPage: 'http://localhost:3000/api'
             }
         },
         computed: {
@@ -69,7 +67,6 @@
         },
         mounted() {
             this.updateData();
-            console.log('download pagination');
             this.GET_PRODUCTS( this.linkStartPage );
         }
     }

@@ -27,7 +27,6 @@
 
     export default{
         name: 'vMainVue',
-        props: {},
         data() {
             return{ }
         },
@@ -35,11 +34,6 @@
             ...mapGetters([
                 'BASKET'
             ])
-        },
-        methods: {},
-        watch: {},
-        mounted() {
-            console.log('download main')
         }
     }
 

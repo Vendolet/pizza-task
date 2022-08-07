@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PostRequest;
 use App\Models\Order;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class BasketController extends Controller
@@ -39,16 +38,5 @@ class BasketController extends Controller
         }
 
         return response()->json(['code'=>200, 'message'=>"Successful"], 200);
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 }

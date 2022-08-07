@@ -27,7 +27,6 @@
         data() {
             return{}
         },
-        computed: {},
         methods: {
             addProductToBasket(){
                 this.$emit('addProductToBasket', this.productData)
