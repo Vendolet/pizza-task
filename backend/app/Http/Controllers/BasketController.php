@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\PostRequest;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BasketController extends Controller
 {
@@ -16,16 +17,28 @@ class BasketController extends Controller
      */
     public function store(PostRequest $request)
     {
-        $query = $request->input('dataCustomer');
+        $query_customer = $request->input('dataCustomer');
+        $query_basket = $request->input('basket');
 
         $order = new Order();
 
-        $order->name = $query['name'];
-        $order->phone = $query['phone'];
-        $order->address = $query['address'];
+        $order->name = $query_customer['name'];
+        $order->phone = $query_customer['phone'];
+        $order->address = $query_customer['address'];
         $order->save();
 
-        return response()->json(['code'=>200, 'message'=>"Successful", 'data'=>'Заказ успешно оформлен'], 200);
+        $order_id = $order->id;
+
+        foreach ($query_basket as $item){
+            $product_id = $item['id'];
+
+            DB::table('order_products')->insert([
+                'order_id' => $order_id,
+                'product_id' => $product_id
+            ]);
+        }
+
+        return response()->json(['code'=>200, 'message'=>"Successful"], 200);
     }
 
     /**

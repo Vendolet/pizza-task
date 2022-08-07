@@ -38,7 +38,7 @@
             calcTotalPriceOrders () {
                 let result = 0;
                 for (let item of this.BASKET){
-                    result += item.price;
+                    result += Number(item.price);
                 }
 
                 return result;
@@ -51,12 +51,8 @@
             removeProductOfBasket(index){
                 this.DELETE_FROM_BASKET(index);
             }
-        },
-        mounted() {
-            console.log('download basket')
         }
     }
-
 </script>
 
 <style lang="scss">

@@ -19,8 +19,9 @@ let store = createStore({
     },
     actions: {
         GET_PRODUCTS({commit}){
-            return axios('http://pizza-market:81/api', {
+            return axios('http://localhost:3000/pizzas', {
                 method: "GET"
+                // http://pizza-market:81/api
             }).then((products) => {
                 commit('SET_PRODUCTS_TO_STATE', products.data);
                 return products;

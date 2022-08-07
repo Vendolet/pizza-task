@@ -26,7 +26,9 @@ class PostRequest extends FormRequest
         return [
             'dataCustomer.name' => 'required',
             'dataCustomer.phone' => 'required|size:10',
-            'dataCustomer.address' => 'required'
+            'dataCustomer.address' => 'required',
+
+            'basket.article' => 'exists:products,article'
         ];
     }
 }

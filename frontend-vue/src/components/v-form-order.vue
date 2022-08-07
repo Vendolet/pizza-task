@@ -62,8 +62,7 @@
                     name: '',
                     phone: '',
                     address: ''
-                },
-                // BASKET: {}
+                }
             }
         },
         validations () {
@@ -96,7 +95,6 @@
                 }
             },
             async sendOrder() {
-                // return
                 axios.post('http://pizza-market:81/api/basket', {
                     basket: this.BASKET,
                     dataCustomer: this.dataCustomer
@@ -111,9 +109,6 @@
             ...mapGetters([
                 'BASKET'
             ])
-        },
-        mounted() {
-            console.log('download form')
         }
     }
 

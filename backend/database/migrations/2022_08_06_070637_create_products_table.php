@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('note')->unique();
             $table->decimal('price');
             $table->string('img');
+            $table->string('article')->unique();
             $table->timestamps();
         });
     }
