@@ -32,7 +32,7 @@ li {
 }
 
 .header {
-  background-color: rgb(41, 52, 72);
+  background-color: rgb(47, 116, 110);
   padding-bottom: 40px;
   color: rgb(255, 255, 255);
 }
@@ -43,7 +43,7 @@ li {
 }
 
 .logo {
-  background-color: rgb(238, 54, 66);
+  background-color: rgb(238, 131, 54);
   display: flex;
   align-items: center;
 }
@@ -60,15 +60,15 @@ li {
 }
 
 .header__button {
-  color: rgb(255, 255, 255);
+  color: rgb(215, 186, 128);
   font-size: 1.5rem;
   padding: 0 20px;
-  background-color: rgb(238, 54, 66);
   display: flex;
   align-items: center;
 }
 
 .order_btn {
+  color: rgb(255, 255, 255);
   background-color: rgb(99, 166, 61);
   margin-bottom: 0;
 }
@@ -82,7 +82,7 @@ li {
   white-space: nowrap;
 }
 .nav-pages .nav-pages__link {
-  background-color: rgb(41, 52, 72);
+  background-color: rgb(47, 116, 110);
   height: 60px;
   flex-grow: 1;
   color: rgb(255, 255, 255);
@@ -93,6 +93,12 @@ li {
 }
 .nav-pages .nav-pages__link:hover {
   background-color: rgb(50, 66, 92);
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .main {
@@ -147,8 +153,8 @@ li {
   font-size: 1.5rem;
 }
 .button:hover {
-  border: 3px solid rgb(238, 54, 66);
-  background-color: rgb(238, 54, 66);
+  border: 3px solid rgb(238, 131, 54);
+  background-color: rgb(238, 131, 54);
 }
 
 .button_disable {
@@ -165,7 +171,7 @@ li {
 }
 
 .button_active {
-  background-color: rgb(238, 54, 66);
+  background-color: rgb(238, 131, 54);
   font-size: 2rem;
 }
 
@@ -236,7 +242,7 @@ li {
   color: rgb(255, 255, 255);
   font-size: 1.5rem;
   cursor: pointer;
-  background-color: rgb(238, 54, 66);
+  background-color: rgb(238, 131, 54);
   width: 140px;
   height: 40px;
   margin-bottom: 10px;
@@ -306,7 +312,7 @@ li {
 }
 
 .footer {
-  background-color: rgb(41, 52, 72);
+  background-color: rgb(47, 116, 110);
   color: rgb(255, 255, 255);
   font-size: 1.5rem;
   flex-shrink: 0;

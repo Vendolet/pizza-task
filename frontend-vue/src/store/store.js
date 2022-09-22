@@ -14,6 +14,7 @@ let store = createStore({
             current_page: null
         },
         startPage: 'http://pizza-market:81/api'
+        // startPage: 'http://localhost:8080',
     },
     mutations: {
         SET_PRODUCTS_TO_STATE: (state, response) => {

@@ -3,7 +3,7 @@
 
   <footer class="footer">
       <div class="wrapper">
-          <div class="footer__license"> 2022 Компания "ПИЦЦА-БЫСТРО"<br>Все права защищены</div>
+          <div class="footer__license"> 2022 Компания "ПИЦЦА-БЫСТРО"<br>Не является торговой маркой</div>
           <div class="footer__callback">
               <div class="footer__email">
                   Обратная связь:<br>
@@ -11,7 +11,7 @@
               </div>
               <div class="footer__develop">
                   Разработано - <br>
-                  <span class="important-text">Для ПРОГРАММНЫЙ ЦЕНТР</span>
+                  <span class="important-text">Тестовое задание</span>
               </div>
           </div>
       </div>

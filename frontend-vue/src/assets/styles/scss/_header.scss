@@ -29,16 +29,16 @@
 }
 
 .header__button{
-    color: $color-white;
+    color: $color-important-text;
     font-size: 1.5rem;
     padding: 0 20px;
-    background-color: $color-red;
 
     display: flex;
     align-items: center;
 }
 
 .order_btn{
+    color: $color-white;
     background-color: $color-green;
     margin-bottom: 0;
     &:hover{
